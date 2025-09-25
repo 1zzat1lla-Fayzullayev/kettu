@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Wrapper from "../layout/wrapper";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,28 +31,47 @@ function Navbar() {
 
   const menuItems = [
     {
-      name: "Asosiy",
-      subItems: ["Asosiy 1", "Asosiy 2", "Asosiy 3", "Asosiy 4"],
-    },
-    {
       name: "Sayohatlar",
       subItems: ["Turlar ro'yxati", "Yagona sayohat"],
     },
   ];
-  const staticLinks = ["Blog", "Biz Haqimizda", "Aloqa"];
+  const staticLinks = [
+    { name: "Asosiy", path: "/" },
+    { name: "Blog", path: "/" },
+    { name: "Biz Haqimizda", path: "/about" },
+    { name: "Aloqa", path: "/contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full backdrop-blur-[10px] z-[99] shadow-md py-1">
       <Wrapper>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-16">
-            <img
-              src="/logo_org.png"
-              className="max-w-[55px] md:max-w-[80px]"
-              alt="Logo"
-            />
+            <Link to={"/"}>
+              <img
+                src="/logo_org.png"
+                className="max-w-[55px] md:max-w-[80px]"
+                alt="Logo"
+              />
+            </Link>
 
             <ul className="hidden lg:flex items-center gap-10">
+              {staticLinks.map((menu, index) => (
+                <li
+                  key={index}
+                  className={`relative group cursor-pointer transition-all duration-300 
+      ${
+        activeLink === menu.name
+          ? "text-green-500 font-semibold"
+          : "hover:text-green-500"
+      } 
+      ${scrolled ? "text-black" : "text-white"}`}
+                  onClick={() => handleLinkClick(menu.name)}
+                >
+                  <a href={menu.path}>{menu.name}</a>
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+              ))}
               {menuItems.map((menu, index) => (
                 <li
                   key={index}
@@ -92,22 +112,6 @@ function Navbar() {
                       </a>
                     ))}
                   </div>
-                </li>
-              ))}
-
-              {staticLinks.map((menu, index) => (
-                <li
-                  key={index}
-                  className={`relative group cursor-pointer transition-all duration-300 
-        ${
-          activeLink === menu
-            ? "text-green-500 font-semibold"
-            : "hover:text-green-500"
-        } ${scrolled ? "text-black" : "text-white"}`}
-                  onClick={() => handleLinkClick(menu)}
-                >
-                  {menu}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
                 </li>
               ))}
             </ul>
@@ -191,13 +195,13 @@ function Navbar() {
                 <li
                   key={index}
                   className={`mb-4 transition-all duration-300 ${
-                    activeLink === menu
+                    activeLink === menu.name
                       ? "text-green-500 font-semibold"
                       : "hover:text-green-500"
                   } cursor-pointer`}
-                  onClick={() => handleLinkClick(menu)}
+                  onClick={() => handleLinkClick(menu.name)}
                 >
-                  {menu}
+                  <a href={menu.path}>{menu.name}</a>
                 </li>
               ))}
             </ul>

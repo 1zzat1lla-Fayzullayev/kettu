@@ -1,5 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Toaster } from "react-hot-toast";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/about";
+import ContactPage from "./pages/contactPage";
 
 const Header = lazy(() => import("./components/header"));
 const InfoCard = lazy(() => import("./components/infoCard"));
@@ -20,15 +24,17 @@ function App() {
           </div>
         }
       >
-        <Navbar />
-        <Header />
-        <InfoCard />
-        <PopularTravel />
-        <StylingPlaces />
-        <OurTraveler />
-        <Contact />
-        <Footer />
-        <Toaster position="top-center" reverseOrder={false} />
+        <BrowserRouter>
+          <Navbar />
+          <Toaster position="top-center" reverseOrder={false} />
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </Suspense>
     </>
   );
