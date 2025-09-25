@@ -200,16 +200,6 @@ function Contact() {
                   {isSubmitting ? "Yuborilmoqda..." : "Obuna bo'lish"}
                 </motion.button>
               </motion.form>
-
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center text-green-200 text-sm mt-4 opacity-80"
-              >
-                Ma'lumotlaringiz maxfiyligi kafolatlangan
-              </motion.p>
             </motion.div>
           </div>
         </motion.div>
