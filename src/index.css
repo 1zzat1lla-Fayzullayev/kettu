@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
-
 @import "tailwindcss";
 
 * {
@@ -131,10 +128,6 @@
   width: 7px;
   height: 7px;
   background-color: #bd002f;
-}
-
-.lora {
-  font-family: "Lora", serif;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,

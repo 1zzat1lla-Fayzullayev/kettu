@@ -127,7 +127,7 @@ function InfoCard() {
                 }}
                 className="flex items-start gap-4 mb-1 bg-white shadow-md hover:shadow-xl 
                            rounded-2xl p-6 cursor-pointer transition-all duration-300
-                           border border-transparent hover:border-green-100"
+                           border border-transparent hover:border-green-100 md:min-h-[150px]"
               >
                 <motion.div
                   variants={iconVariants}
