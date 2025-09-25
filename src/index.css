@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  filter: drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.header-bg {
+  background-image: url(https://i.pinimg.com/originals/9b/96/53/9b965339422c0ff168a6d20ba94d1cdc.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.react-datepicker__header {
+  background: #fff !important;
+  border: none !important;
+}
+
+.react-datepicker__day--today {
+  background: #357ebd !important;
+  color: white !important;
+}
+
+.react-datepicker__month-container {
+  padding: 8px !important;
+}
+
+.react-datepicker {
+  border: none !important;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+@media screen and (max-width: 992px) {
+  .react-datepicker {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
+
+.tour_info_price_discount {
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  padding: 10px 8px 6px;
+  display: inline-block;
+  border-radius: 0 8px 0 0;
+  -webkit-border-radius: 0 8px 0 0;
+  -moz-border-radius: 0 8px 0 0;
+  -ms-border-radius: 0 8px 0 0;
+  -o-border-radius: 0 8px 0 0;
+  background-color: #e01a4b;
+  text-align: center;
+  color: #fff;
+  line-height: 1;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  top: -7px;
+  right: 15px;
+}
+
+.tour_info_price_discount::before {
+  width: 100%;
+  height: 6px;
+  background-color: #e01a4b;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+}
+
+.tour_info_price_discount::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 100%;
+  border-radius: 8px 0 0 0;
+  -webkit-border-radius: 8px 0 0 0;
+  -moz-border-radius: 8px 0 0 0;
+  -ms-border-radius: 8px 0 0 0;
+  -o-border-radius: 8px 0 0 0;
+  width: 7px;
+  height: 7px;
+  background-color: #bd002f;
+}
+
+.lora {
+  font-family: "Lora", serif;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 8px;
+  border: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  padding: 4px;
+  background: rgba(113, 149, 179, 0.2);
+}
+
+.user_card:hover .user_img {
+  box-shadow: 0 0 0 8px rgba(78, 255, 34, 0.2);
+}
+
+.contact {
+  background-image: url("	http://demoapus-wp1.com/travlio/wp-content/uploads/2020/08/bg-new.png");
+}
