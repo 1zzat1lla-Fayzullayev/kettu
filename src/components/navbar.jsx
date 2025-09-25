@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Wrapper from "../layout/wrapper";
 
 function Navbar() {
@@ -6,15 +6,6 @@ function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeLink, setActiveLink] = useState(null);
   const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 400); 
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
@@ -27,6 +18,15 @@ function Navbar() {
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     {
@@ -41,12 +41,9 @@ function Navbar() {
   const staticLinks = ["Blog", "Biz Haqimizda", "Aloqa"];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full backdrop-blur-[10px] z-[99] shadow-md py-1 transition-colors duration-300`}
-    >
+    <nav className="fixed top-0 left-0 w-full backdrop-blur-[10px] z-[99] shadow-md py-1">
       <Wrapper>
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center gap-16">
             <img
               src="/logo_org.png"
@@ -54,28 +51,23 @@ function Navbar() {
               alt="Logo"
             />
 
-            {/* Desktop menu */}
             <ul className="hidden lg:flex items-center gap-10">
               {menuItems.map((menu, index) => (
                 <li
                   key={index}
-                  className="relative group"
+                  className={`relative group ${
+                    scrolled ? "text-black" : "text-white"
+                  }`}
                   onMouseEnter={() => toggleDropdown(menu.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <button
                     className={`relative pb-1 transition-all duration-300 
-                    ${
-                      activeLink === menu.name
-                        ? "font-semibold"
-                        : "hover:font-semibold"
-                    }
-                    ${
-                      scrolled
-                        ? "text-black hover:text-green-500"
-                        : "text-white hover:text-green-300"
-                    }
-                    `}
+          ${
+            activeLink === menu.name
+              ? "text-green-500 font-semibold"
+              : "hover:text-green-500"
+          }`}
                     aria-expanded={activeDropdown === menu.name}
                     onClick={() => handleLinkClick(menu.name)}
                   >
@@ -84,11 +76,11 @@ function Navbar() {
                   </button>
                   <div
                     className={`absolute top-[50px] left-0 w-[200px] bg-white shadow-lg transition-all duration-300 px-4 ease-in-out dropdown-menu 
-                    ${
-                      activeDropdown === menu.name
-                        ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible -translate-y-3"
-                    }`}
+          ${
+            activeDropdown === menu.name
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible -translate-y-3"
+          } `}
                   >
                     {menu.subItems.map((subItem, i) => (
                       <a
@@ -107,13 +99,11 @@ function Navbar() {
                 <li
                   key={index}
                   className={`relative group cursor-pointer transition-all duration-300 
-                  ${activeLink === menu ? "font-semibold" : ""}
-                  ${
-                    scrolled
-                      ? "text-black hover:text-green-500"
-                      : "text-white hover:text-green-300"
-                  }
-                `}
+        ${
+          activeLink === menu
+            ? "text-green-500 font-semibold"
+            : "hover:text-green-500"
+        } ${scrolled ? "text-black" : "text-white"}`}
                   onClick={() => handleLinkClick(menu)}
                 >
                   {menu}
@@ -123,17 +113,17 @@ function Navbar() {
             </ul>
           </div>
 
-          {/* Right side */}
-          <div
-            className={`hidden lg:flex items-center gap-2 cursor-pointer ${
-              scrolled ? "text-black" : "text-white"
-            }`}
-          >
+          <div className="hidden lg:flex items-center gap-2 cursor-pointer">
             <img src="/user-profile.svg" className="w-6" alt="User" />
-            <p className="text-md font-medium">Tizimga kirish</p>
+            <p
+              className={`text-md font-medium ${
+                scrolled ? "text-black" : "text-white"
+              }`}
+            >
+              Tizimga kirish
+            </p>
           </div>
 
-          {/* Mobile hamburger */}
           <button className="lg:hidden" onClick={toggleMobileMenu}>
             <div className="flex flex-col bg-green-700 rounded-md w-10 h-10 justify-center items-center p-2">
               <div className="flex flex-col items-end gap-1">
@@ -144,6 +134,74 @@ function Navbar() {
               </div>
             </div>
           </button>
+        </div>
+
+        <div
+          className={`fixed inset-0 bg-[#000000b6] h-screen bg-opacity-40 z-[99] transition-opacity duration-300 ease-in-out ${
+            isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          onClick={toggleMobileMenu}
+        >
+          <div
+            className={`fixed left-0 top-0 h-screen w-[300px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+              isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div
+              className="bg-[#e44343] px-4 py-3 text-center text-white font-semibold cursor-pointer flex items-center justify-center"
+              onClick={toggleMobileMenu}
+            >
+              <img src="/close.svg" className="w-[30px]" />
+              <span> Yopish</span>
+            </div>
+            <ul className="p-4">
+              {menuItems.map((menu, index) => (
+                <li key={index} className="mb-4">
+                  <button
+                    onClick={() => {
+                      toggleDropdown(menu.name);
+                      handleLinkClick(menu.name);
+                    }}
+                    className={`block transition-all duration-300 ${
+                      activeLink === menu.name
+                        ? "text-green-500 font-semibold"
+                        : "hover:text-green-500"
+                    } cursor-pointer focus:outline-none w-full text-left`}
+                  >
+                    {menu.name}
+                    <b className="caret"></b>
+                  </button>
+                  {activeDropdown === menu.name && (
+                    <div className="ml-4 mt-2">
+                      {menu.subItems.map((subItem, i) => (
+                        <a
+                          key={i}
+                          href="#"
+                          className="block py-1 text-sm text-[#637082] hover:text-green-500 transition-all duration-300"
+                        >
+                          {subItem}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              ))}
+              {staticLinks.map((menu, index) => (
+                <li
+                  key={index}
+                  className={`mb-4 transition-all duration-300 ${
+                    activeLink === menu
+                      ? "text-green-500 font-semibold"
+                      : "hover:text-green-500"
+                  } cursor-pointer`}
+                  onClick={() => handleLinkClick(menu)}
+                >
+                  {menu}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Wrapper>
     </nav>
