@@ -47,6 +47,7 @@ function InfoCard() {
                     src={card.icon}
                     alt={card.title}
                     className="w-[55px] h-[55px]"
+                    loading="lazy"
                   />
                 </div>
                 <div>

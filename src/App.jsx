@@ -1,26 +1,28 @@
-import Header from "./components/header";
-import InfoCard from "./components/infoCard";
-import Navbar from "./components/navbar";
-import PopularTravel from "./components/popularTravel";
-import "font-awesome/css/font-awesome.min.css";
-import StylingPlaces from "./components/stylingPlaces";
-import TrandingEvent from "./components/trandingEvent";
-import OurTraveler from "./components/ourTraveler";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
+import { Suspense, lazy } from "react";
+
+const Header = lazy(() => import("./components/header"));
+const InfoCard = lazy(() => import("./components/infoCard"));
+const Navbar = lazy(() => import("./components/navbar"));
+const PopularTravel = lazy(() => import("./components/popularTravel"));
+const StylingPlaces = lazy(() => import("./components/stylingPlaces"));
+const OurTraveler = lazy(() => import("./components/ourTraveler"));
+const Contact = lazy(() => import("./components/contact"));
+const Footer = lazy(() => import("./components/footer"));
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Header />
-      <InfoCard />
-      <PopularTravel />
-      <StylingPlaces />
-      {/* <TrandingEvent /> */}
-      <OurTraveler />
-      <Contact />
-      <Footer />
+      
+      <Suspense fallback={<div className="text-center py-10 flex justify-center items-center min-h-screen"><div className="loader"></div></div>}>
+        <Navbar />
+        <Header />
+        <InfoCard />
+        <PopularTravel />
+        <StylingPlaces />
+        <OurTraveler />
+        <Contact />
+        <Footer />
+      </Suspense>
     </>
   );
 }

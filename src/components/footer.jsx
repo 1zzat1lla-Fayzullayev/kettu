@@ -13,6 +13,7 @@ function Footer() {
                     src="/logo_org.png"
                     alt="Sayohat Platforma"
                     className="w-[150px]"
+                    loading="lazy"
                   />
                 </a>
               </div>
@@ -31,24 +32,28 @@ function Footer() {
                   <img
                     src="/facebook-176-svgrepo-com.svg"
                     className="w-[20px]"
+                    loading="lazy"
                   />
                 </a>
                 <a href="#" className="text-white hover:text-gray-400">
                   <img
                     src="/twitter-154-svgrepo-com.svg"
                     className="w-[20px]"
+                    loading="lazy"
                   />
                 </a>
                 <a href="#" className="text-white hover:text-gray-400">
                   <img
                     src="/youtube-168-svgrepo-com.svg"
                     className="w-[20px]"
+                    loading="lazy"
                   />
                 </a>
                 <a href="#" className="text-white hover:text-gray-400">
                   <img
                     src="/linked-in-logo-of-two-letters-svgrepo-com.svg"
                     className="w-[20px]"
+                    loading="lazy"
                   />
                 </a>
               </div>
@@ -132,7 +137,7 @@ function Footer() {
                   href="#"
                   className="flex items-center space-x-2 border border-[#353d56] p-3 transition-all ease-in hover:border-[#ffffff4d]"
                 >
-                  <img src="/android.svg" className="w-[30px]" />
+                  <img src="/android.svg" className="w-[30px]" loading="lazy" />
                   <div>
                     <div className="text-sm text-white">Google Play</div>
                     <div className="text-xs text-gray-400">Yuklab oling</div>
@@ -142,7 +147,11 @@ function Footer() {
                   href="#"
                   className="flex items-center space-x-2 border border-[#353d56] p-3 transition-all ease-in hover:border-[#ffffff4d]"
                 >
-                  <img src="/app-store.svg" className="w-[30px]" />
+                  <img
+                    src="/app-store.svg"
+                    className="w-[30px]"
+                    loading="lazy"
+                  />
                   <div>
                     <div className="text-sm text-white">App Store</div>
                     <div className="text-xs text-gray-400">Hoziroq oling</div>

@@ -91,6 +91,7 @@ function OurTraveler() {
                   <img
                     src={user.image}
                     alt={user.name}
+                    loading="lazy"
                     className="rounded-[50%] object-cover w-[80px] h-[80px] transition-all ease-in user_img"
                   />
                 </div>

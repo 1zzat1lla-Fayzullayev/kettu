@@ -76,6 +76,7 @@ function StylingPlaces() {
                     <img
                       src={place.image}
                       alt={place.title}
+                      loading="lazy"
                       className="rounded-[10px] object-cover min-[768px]:w-[400px] h-[350px]"
                     />
                     <div className="bg-[#00000063] absolute left-0 top-0 inset-0 rounded-[10px]"></div>

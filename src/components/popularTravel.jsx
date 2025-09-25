@@ -29,6 +29,7 @@ const TravelCard = ({
           src={img}
           className="w-full transition-all ease-in object-cover hover:scale-105 transform rounded-[10px] h-[220px]"
           alt={title}
+          loading="lazy"
         />
       </div>
       <div className="bg-white shadow-xl mx-auto absolute left-0 right-0 bottom-[-50px] rounded-[5px] p-2 md:p-5 max-w-[350px] w-full transition-all ease-in transform">
@@ -40,7 +41,7 @@ const TravelCard = ({
               {title}
             </h4>
             <div className="flex items-center gap-2">
-              <img src="/location.svg" className="w-[15px]" alt="Location" />
+              <img src="/location.svg" className="w-[15px]" alt="Location" loading="lazy"/>
               <span className="text-gray-600 text-[14px] md:text-[16px]">
                 {location}
               </span>
