@@ -30,7 +30,7 @@ function Header() {
   };
 
   return (
-    <div className="relative min-h-screen bg-cover bg-center bg-no-repeat header-bg flex justify-center items-center z-[90]">
+    <div className="relative min-h-screen bg-cover bg-center bg-no-repeat header-bg flex justify-center items-center z-[90] pb-5 md:pb-0">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

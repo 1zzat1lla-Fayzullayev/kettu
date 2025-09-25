@@ -32,12 +32,12 @@ const TravelCard = ({
           loading="lazy"
         />
       </div>
-      <div className="bg-white shadow-xl mx-auto absolute left-0 right-0 bottom-[-50px] rounded-[5px] p-2 md:p-5 max-w-[350px] w-full transition-all ease-in transform">
+      <div className="bg-white shadow-xl mx-auto absolute left-0 right-0 bottom-[-50px] rounded-[10px] p-2 md:p-5 max-w-[350px] w-full transition-all ease-in transform">
         {foiz && <div className="tour_info_price_discount">{foiz}</div>}
 
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="text-[16px] md:text-[17px] font-bold transition-all ease-in hover:text-green-700 cursor-pointer">
+            <h4 className="text-[16px] md:text-[17px] font-bold transition-all ease-in hover:text-green-700 cursor-pointer pt-6 md:pt-0">
               {title}
             </h4>
             <div className="flex items-center gap-2">
