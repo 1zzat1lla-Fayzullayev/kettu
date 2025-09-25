@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { Toaster } from "react-hot-toast";
 
 const Header = lazy(() => import("./components/header"));
 const InfoCard = lazy(() => import("./components/infoCard"));
@@ -12,8 +13,13 @@ const Footer = lazy(() => import("./components/footer"));
 function App() {
   return (
     <>
-      
-      <Suspense fallback={<div className="text-center py-10 flex justify-center items-center min-h-screen"><div className="loader"></div></div>}>
+      <Suspense
+        fallback={
+          <div className="text-center py-10 flex justify-center items-center min-h-screen">
+            <div className="loader"></div>
+          </div>
+        }
+      >
         <Navbar />
         <Header />
         <InfoCard />
@@ -22,6 +28,7 @@ function App() {
         <OurTraveler />
         <Contact />
         <Footer />
+        <Toaster position="top-center" reverseOrder={false} />
       </Suspense>
     </>
   );

@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
 
 function StylingPlaces() {
   const places = [
@@ -21,7 +22,7 @@ function StylingPlaces() {
     },
     {
       image: "/dubai-resort.jpg",
-      title: "Dubay cho‘l resorti",
+      title: "Dubay cho'l resorti",
       discount: "12% chegirma",
       price: "$180.00",
     },
@@ -40,17 +41,29 @@ function StylingPlaces() {
   ];
 
   return (
-    <>
-      <div className="bg-[#F7F9FC] mt-[100px] py-4 font-lora">
-        <Wrapper>
-          <div className="text-center mb-8 relative mt-0 md:mt-[50px]">
-            <p className=" text-[#2C3F58] font-lora text-[17px] md:text-[20px]">
-              Eng yaxshi joylashish maskanlari
-            </p>
-            <h2 className="text-[25px] md:text-[30px] font-lora leading-[30px] md:leading-[50px] lg:text-[50px] font-bold text-[#2C3F58]">
-              Sayohatchilar uchun tanlangan mehmonxonalar
-            </h2>
-          </div>
+    <div className="bg-[#F7F9FC] mt-[100px] py-4">
+      <Wrapper>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 relative mt-0 md:mt-[50px]"
+        >
+          <p className="text-[#2C3F58] text-[17px] md:text-[20px]">
+            Eng yaxshi joylashish maskanlari
+          </p>
+          <h2 className="text-[25px] md:text-[30px] leading-[30px] md:leading-[50px] lg:text-[50px] font-bold text-[#2C3F58]">
+            Sayohatchilar uchun tanlangan mehmonxonalar
+          </h2>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <Swiper
             modules={[Pagination]}
             spaceBetween={30}
@@ -71,9 +84,18 @@ function StylingPlaces() {
           >
             {places.map((place, index) => (
               <SwiperSlide key={index}>
-                <div className="w-full rounded-[10px] relative overflow-hidden mb-[50px]">
-                  <div className="relative transition-all ease-in transform hover:scale-105">
-                    <img
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 0.5, duration: 0.6 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="w-full rounded-[10px] relative overflow-hidden mb-[50px] cursor-pointer"
+                >
+                  <div className="relative overflow-hidden rounded-[10px]">
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
                       src={place.image}
                       alt={place.title}
                       loading="lazy"
@@ -81,10 +103,24 @@ function StylingPlaces() {
                     />
                     <div className="bg-[#00000063] absolute left-0 top-0 inset-0 rounded-[10px]"></div>
                   </div>
-                  <div className="inline-block absolute bg-[#ff5722] py-[4px] px-[15px] rounded-[50px] top-[15px] right-[15px] font-[500] text-white text-[14px]">
+
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ delay: index * 0.1 + 0.7, type: "spring" }}
+                    viewport={{ once: true }}
+                    className="inline-block absolute bg-[#ff5722] py-[4px] px-[15px] rounded-[50px] top-[15px] right-[15px] font-[500] text-white text-[14px]"
+                  >
                     {place.discount}
-                  </div>
-                  <div className="absolute bottom-[15px] left-[15px] text-white">
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 + 0.8, duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="absolute bottom-[15px] left-[15px] text-white"
+                  >
                     <h3 className="text-[20px] mb-[5px] font-[600]">
                       {place.title}
                     </h3>
@@ -100,14 +136,14 @@ function StylingPlaces() {
                       </span>
                       <span> / kecha</span>
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </Wrapper>
-      </div>
-    </>
+        </motion.div>
+      </Wrapper>
+    </div>
   );
 }
 
