@@ -33,7 +33,7 @@
 }
 
 .header-bg {
-  background-image: url(https://i.pinimg.com/originals/9b/96/53/9b965339422c0ff168a6d20ba94d1cdc.jpg);
+  background-image: url(/header_bg.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -165,7 +165,7 @@
 }
 
 .contact {
-  background-image: url("	http://demoapus-wp1.com/travlio/wp-content/uploads/2020/08/bg-new.png");
+  background-image: url("/bg-new.png");
 }
 
 .loader {
