@@ -45,7 +45,7 @@ function Contact() {
   };
 
   const sendToTelegram = async (data) => {
-    const telegramBotToken = "8409675343:AAGHaiD8FJs0Z93Hcaoq6GzqOj9moFjtxUk"; // default token
+    const telegramBotToken = "8409675343:AAGHaiD8FJs0Z93Hcaoq6GzqOj9moFjtxUk";
     const chatId = 6475396776;
 
     const message = `

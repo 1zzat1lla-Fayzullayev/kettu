@@ -1,181 +1,181 @@
+import {
+  ArrowRight,
+  CheckCircle,
+  Compass,
+  Mail,
+  MapPin,
+  Phone,
+  Shield,
+} from "lucide-react";
 import Wrapper from "../layout/wrapper";
 
 function Footer() {
   return (
-    <div className="bg-[#252C41]">
-      <Wrapper>
-        <section className="py-12">
-          <div className="flex flex-wrap -mx-4">
-            <div className="w-full md:w-1/5 px-4 mb-8">
-              <div className="logo mb-6">
-                <a href="/">
-                  <img
-                    src="/logo_org.png"
-                    alt="Sayohat Platforma"
-                    className="w-[150px]"
-                    loading="lazy"
-                  />
-                </a>
+    <>
+      {/* FOOTER */}
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Brand */}
+            <div className="md:col-span-1">
+              <div className="flex items-start flex-col space-x-2 mb-4">
+                <div className="">
+                  <img src="/logo_org.png" alt="" className="w-[100px]" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold">Transport Mix</h1>
+                  <p className="text-xs text-gray-400">Sayohat platformasi</p>
+                </div>
               </div>
-              <div className="text-sm mb-2 text-[#858B9F] font-[600]">
-                Email:
-              </div>
-              <div className="text-sm mb-4 text-[#858B9F]">info@sayohat.uz</div>
-              <div className="text-sm mb-2 text-[#858B9F] font-[600]">
-                Telefon:
-              </div>
-              <div className="text-sm mb-4 text-[#858B9F]">
-                +998 90 123 45 67
-              </div>
+              <p className="text-gray-400 mb-6">
+                Dunyodagi barcha transportlar va mehmonxonalar bir platformada.
+                Sayohatingizni oson va qulay rejalashtiring.
+              </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-gray-400">
-                  <img
-                    src="/facebook-176-svgrepo-com.svg"
-                    className="w-[20px]"
-                    loading="lazy"
-                  />
-                </a>
-                <a href="#" className="text-white hover:text-gray-400">
-                  <img
-                    src="/twitter-154-svgrepo-com.svg"
-                    className="w-[20px]"
-                    loading="lazy"
-                  />
-                </a>
-                <a href="#" className="text-white hover:text-gray-400">
-                  <img
-                    src="/youtube-168-svgrepo-com.svg"
-                    className="w-[20px]"
-                    loading="lazy"
-                  />
-                </a>
-                <a href="#" className="text-white hover:text-gray-400">
-                  <img
-                    src="/linked-in-logo-of-two-letters-svgrepo-com.svg"
-                    className="w-[20px]"
-                    loading="lazy"
-                  />
-                </a>
+                <button className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition">
+                  <Phone className="w-5 h-5" />
+                </button>
+                <button className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition">
+                  <Mail className="w-5 h-5" />
+                </button>
               </div>
             </div>
 
-            <div className="w-full md:w-1/5 px-4 mb-8">
-              <h2 className="text-lg font-semibold mb-4 text-white">
-                Tezkor Havolalar
-              </h2>
-              <ul className="text-sm text-[#858B9F]">
-                <li className="mb-4">
-                  <a href="#">Asosiy</a>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Tezkor havolalar</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Biz haqimizda
+                  </a>
                 </li>
-                <li className="mb-4">
-                  <a href="#">Sayohatlar</a>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Transportlar
+                  </a>
                 </li>
-                <li className="mb-4">
-                  <a href="#">Blog</a>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Mehmonxonalar
+                  </a>
                 </li>
-                <li className="mb-4">
-                  <a href="#">Biz Haqimizda</a>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Sayohat paketlari
+                  </a>
                 </li>
-                <li className="mb-4">
-                  <a href="#">Aloqa</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="w-full md:w-1/5 px-4 mb-8">
-              <h2 className="text-lg font-semibold mb-4 text-white">
-                Kategoriyalar
-              </h2>
-              <ul className="text-sm text-[#858B9F]">
-                <li className="mb-4">
-                  <a href="#">Transport</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Mehmonxonalar</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Turlar</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Ovqatlanish</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Sayohat maslahatlari</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="w-full md:w-1/5 px-4 mb-8">
-              <h2 className="text-lg font-semibold mb-4 text-white">
-                Foydali Havolalar
-              </h2>
-              <ul className="text-sm text-[#858B9F]">
-                <li className="mb-4">
-                  <a href="#">Profil</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Buyurtmalar</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Sevimlilar</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Sozlamalar</a>
-                </li>
-                <li className="mb-4">
-                  <a href="#">Yordam markazi</a>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Hamkorlik
+                  </a>
                 </li>
               </ul>
             </div>
 
-            <div className="w-full md:w-1/5 px-4 mb-8">
-              <h2 className="text-lg font-semibold mb-4 text-white">
-                Mobil Ilova
-              </h2>
-              <div className="space-y-4">
-                <a
-                  href="#"
-                  className="flex items-center space-x-2 border border-[#353d56] p-3 transition-all ease-in hover:border-[#ffffff4d]"
-                >
-                  <img src="/android.svg" className="w-[30px]" loading="lazy" />
-                  <div>
-                    <div className="text-sm text-white">Google Play</div>
-                    <div className="text-xs text-gray-400">Yuklab oling</div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center space-x-2 border border-[#353d56] p-3 transition-all ease-in hover:border-[#ffffff4d]"
-                >
-                  <img
-                    src="/app-store.svg"
-                    className="w-[30px]"
-                    loading="lazy"
-                  />
-                  <div>
-                    <div className="text-sm text-white">App Store</div>
-                    <div className="text-xs text-gray-400">Hoziroq oling</div>
-                  </div>
-                </a>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Qo'llab-quvvatlash</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Yordam markazi
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Aloqa
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Shartlar
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Maxfiylik
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Bekor qilish
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Bog'lanish</h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-gray-400" />
+                  <span className="text-gray-400">+998 90 123 45 67</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-gray-400" />
+                  <span className="text-gray-400">info@transportmix.uz</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-gray-400" />
+                  <span className="text-gray-400">Toshkent, O'zbekiston</span>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
-      </Wrapper>
 
-      <section className="bg-[#1B2132] py-6">
-        <Wrapper>
-          <div className="flex items-center">
-            <div className="w-full">
-              <div className="text-sm text-center text-[#858B9F]">
-                © {new Date().getFullYear()} Sayohat Platforma – Barcha huquqlar
-                himoyalangan
+              <div className="mt-6">
+                <h5 className="font-medium mb-3">Yangiliklar</h5>
+                <div className="flex space-x-2">
+                  <input
+                    type="email"
+                    placeholder="Email manzil"
+                    className="flex-1 bg-gray-800 px-4 py-2 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </Wrapper>
-      </section>
-    </div>
+
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center">
+            <div className="flex items-center">
+              <span className="text-gray-400">
+                © 2024 Transport Mix. Barcha huquqlar himoyalangan.
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
 

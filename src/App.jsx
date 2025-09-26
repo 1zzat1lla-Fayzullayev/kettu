@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import ContactPage from "./pages/contactPage";
+import Travels from "./pages/travels";
 
 const Header = lazy(() => import("./components/header"));
 const InfoCard = lazy(() => import("./components/infoCard"));
@@ -32,6 +33,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/travels" element={<Travels />} />
           </Routes>
           <Footer />
         </BrowserRouter>

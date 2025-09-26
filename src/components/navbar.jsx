@@ -29,15 +29,10 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = [
-    {
-      name: "Sayohatlar",
-      subItems: ["Turlar ro'yxati", "Yagona sayohat"],
-    },
-  ];
   const staticLinks = [
     { name: "Asosiy", path: "/" },
     { name: "Blog", path: "/" },
+    { name: "Sayohatlar", path: "/travels" },
     { name: "Biz Haqimizda", path: "/about" },
     { name: "Aloqa", path: "/contact" },
   ];
@@ -72,7 +67,7 @@ function Navbar() {
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
                 </li>
               ))}
-              {menuItems.map((menu, index) => (
+              {/* {menuItems.map((menu, index) => (
                 <li
                   key={index}
                   className={`relative group ${
@@ -113,7 +108,7 @@ function Navbar() {
                     ))}
                   </div>
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
 
@@ -160,7 +155,7 @@ function Navbar() {
               <span> Yopish</span>
             </div>
             <ul className="p-4">
-              {menuItems.map((menu, index) => (
+              {/* {menuItems.map((menu, index) => (
                 <li key={index} className="mb-4">
                   <button
                     onClick={() => {
@@ -190,7 +185,7 @@ function Navbar() {
                     </div>
                   )}
                 </li>
-              ))}
+              ))} */}
               {staticLinks.map((menu, index) => (
                 <li
                   key={index}
