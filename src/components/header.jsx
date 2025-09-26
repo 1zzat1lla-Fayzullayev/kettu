@@ -86,7 +86,7 @@ function Header() {
                 type="text"
                 placeholder="Toshkent"
                 className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 
-                           focus:ring-green-500 transition-all duration-300 hover:shadow-md"
+                           focus:ring-[#365a84] transition-all duration-300 hover:shadow-md"
               />
             </motion.div>
 
@@ -103,7 +103,7 @@ function Header() {
                 type="text"
                 placeholder="Parij"
                 className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 
-                           focus:ring-green-500 transition-all duration-300 hover:shadow-md"
+                           focus:ring-[#365a84] transition-all duration-300 hover:shadow-md"
               />
             </motion.div>
 
@@ -115,7 +115,7 @@ function Header() {
             >
               <label className="text-gray-600 font-medium mb-2">Sanalar</label>
               <div
-                className="border rounded-md px-4 py-2 cursor-pointer hover:border-green-500 transition-all duration-300"
+                className="border rounded-md px-4 py-2 cursor-pointer hover:border-[#365a84] transition-all duration-300"
                 onClick={() => setShowDatePicker(!showDatePicker)}
               >
                 {startDate && endDate
@@ -157,7 +157,7 @@ function Header() {
                 Mehmonlar
               </label>
               <div
-                className="border rounded-md px-4 py-2 cursor-pointer hover:border-green-500 transition-all duration-300"
+                className="border rounded-md px-4 py-2 cursor-pointer hover:border-[#365a84] transition-all duration-300"
                 onClick={() => setShowGuestPicker(!showGuestPicker)}
               >
                 {totalGuests} kishi
@@ -206,7 +206,7 @@ function Header() {
                             onClick={() => setAdults(Math.max(1, adults - 1))}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-green-500 hover:text-green-600"
+                       hover:border-[#365a84] hover:text-green-600"
                             disabled={adults <= 1}
                           >
                             -
@@ -224,7 +224,7 @@ function Header() {
                             onClick={() => setAdults(adults + 1)}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-green-500 hover:text-green-600"
+                       hover:border-[#365a84] hover:text-green-600"
                           >
                             +
                           </motion.button>
@@ -252,7 +252,7 @@ function Header() {
                             onClick={() => setYouth(Math.max(0, youth - 1))}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-green-500 hover:text-green-600"
+                       hover:border-[#365a84] hover:text-green-600"
                             disabled={youth <= 0}
                           >
                             -
@@ -270,7 +270,7 @@ function Header() {
                             onClick={() => setYouth(youth + 1)}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-green-500 hover:text-green-600"
+                       hover:border-[#365a84] hover:text-green-600"
                           >
                             +
                           </motion.button>
@@ -298,7 +298,7 @@ function Header() {
                             }
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-green-500 hover:text-green-600"
+                       hover:border-[#365a84] hover:text-green-600"
                             disabled={children <= 0}
                           >
                             -
@@ -316,7 +316,7 @@ function Header() {
                             onClick={() => setChildren(children + 1)}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-green-500 hover:text-green-600"
+                       hover:border-[#365a84] hover:text-green-600"
                           >
                             +
                           </motion.button>
@@ -340,7 +340,7 @@ function Header() {
                         }}
                         whileTap={{ scale: 0.98 }}
                         onClick={handleApplyGuests}
-                        className="bg-green-500 text-white w-full py-3 rounded-lg font-semibold 
+                        className="bg-[#365a84] text-white w-full py-3 rounded-lg font-semibold 
                    hover:bg-green-600 transition-all duration-200 text-lg"
                       >
                         Tasdiqlash
@@ -364,7 +364,7 @@ function Header() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-green-500 text-white w-full h-[60px] rounded-md font-semibold hover:bg-green-600 transition"
+                className="bg-[#365a84] text-white w-full h-[60px] rounded-md font-semibold hover:bg-green-600 transition"
               >
                 Qidirish
               </motion.button>

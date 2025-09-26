@@ -164,7 +164,7 @@
 .loader {
   width: 48px;
   height: 48px;
-  background: green;
+  background: #365a84;
   border-radius: 9px;
   --c:no-repeat radial-gradient(farthest-side,#000 92%,#0000);
   --s:18px 18px;

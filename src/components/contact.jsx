@@ -78,7 +78,7 @@ function Contact() {
     >
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="absolute top-0 left-0 w-72 h-72 bg-green-600 rounded-full -translate-x-36 -translate-y-36 opacity-20"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-500 rounded-full translate-x-48 translate-y-48 opacity-20"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#365a84] rounded-full translate-x-48 translate-y-48 opacity-20"></div>
 
       <motion.div
         animate={{ rotate: 360 }}
@@ -115,7 +115,7 @@ function Contact() {
                 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-black leading-tight"
               >
                 Sayohat yangiliklari va{" "}
-                <span className="text-green-500">chegirmalar!</span>
+                <span className="text-[#365a84]">chegirmalar!</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -195,7 +195,7 @@ function Contact() {
                   whileTap={{ scale: 0.95 }}
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-lg hover:from-green-700 hover:to-green-600 transition-all font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 py-4 bg-[#365a84] text-white rounded-lg transition-all font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Yuborilmoqda..." : "Obuna bo'lish"}
                 </motion.button>

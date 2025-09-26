@@ -113,7 +113,7 @@ function Login() {
           ease: "easeInOut",
           delay: 1,
         }}
-        className="absolute bottom-32 right-16 w-8 h-8 bg-green-400/20 rounded-full blur-sm"
+        className="absolute bottom-32 right-16 w-8 h-8  rounded-full blur-sm"
       />
       <motion.div
         animate={{
@@ -131,7 +131,7 @@ function Login() {
 
       <motion.div
         variants={formVariants}
-        className="relative z-10 bg-white/90 backdrop-blur-lg p-5 rounded-2xl shadow-2xl w-full max-w-md border border-white/20"
+        className="relative z-10 bg-white/30 backdrop-blur-lg p-5 rounded-2xl shadow-2xl w-full max-w-md border border-white/20"
       >
         {/* Logo/Title */}
         <motion.div
@@ -141,7 +141,7 @@ function Login() {
           className="text-center "
         >
           <motion.h2
-            className="text-3xl font-bold text-gray-800 mb-2"
+            className="text-3xl font-bold text-white mb-2"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring" }}
@@ -149,7 +149,7 @@ function Login() {
             TransportMix
           </motion.h2>
           <motion.p
-            className="text-green-600 font-medium"
+            className="text-[#365a84] font-medium"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -161,7 +161,7 @@ function Login() {
         <form onSubmit={handleLogin} className="space-y-2">
           {/* Email Input */}
           <motion.div variants={inputVariants} custom={0}>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-white mb-2">
               Email
             </label>
             <motion.input
@@ -171,14 +171,14 @@ function Login() {
               }}
               type="email"
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#365a84] focus:border-transparent transition-all duration-200 placeholder-[white]"
               placeholder="you@example.com"
             />
           </motion.div>
 
           {/* Password Input */}
           <motion.div variants={inputVariants} custom={1}>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-white mb-2">
               Parol
             </label>
             <motion.input
@@ -188,7 +188,7 @@ function Login() {
               }}
               type="password"
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#365a84] focus:border-transparent transition-all duration-200 placeholder-[white]"
               placeholder="••••••••"
             />
           </motion.div>
@@ -203,13 +203,12 @@ function Login() {
             <label className="flex items-center">
               <input
                 type="checkbox"
-                className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                className="rounded border-gray-300 text-[#365a84] focus:ring-[#365a84]"
               />
-              <span className="ml-2 text-gray-600">Eslab qolish</span>
+              <span className="ml-2 text-white">Eslab qolish</span>
             </label>
             <motion.span
-              whileHover={{ scale: 1.05, color: "#16a34a" }}
-              className="text-green-600 cursor-pointer hover:underline"
+              className="text-[#365a84] cursor-pointer hover:underline"
             >
               Parolni unutdingizmi?
             </motion.span>
@@ -221,7 +220,7 @@ function Login() {
             whileHover="hover"
             whileTap="tap"
             type="submit"
-            className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white py-3 rounded-xl font-semibold transition-all duration-200 shadow-lg"
+            className="w-full bg-gradient-to-r from-[#365a84] to-[#365a84] text-white py-3 rounded-xl font-semibold transition-all duration-200 shadow-lg"
           >
             Tizimga kirish
           </motion.button>
@@ -230,12 +229,11 @@ function Login() {
         {/* Register Link */}
         <motion.p
           variants={textVariants}
-          className="text-center text-gray-600 mt-6 text-sm"
+          className="text-center text-white mt-6 text-sm"
         >
           Hisobingiz yo'qmi?{" "}
           <motion.span
-            whileHover={{ scale: 1.05, color: "#16a34a" }}
-            className="text-green-600 cursor-pointer hover:underline font-medium"
+            className="text-[green] cursor-pointer hover:underline font-medium"
           >
             Ro'yxatdan o'tish
           </motion.span>

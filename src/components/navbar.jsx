@@ -27,8 +27,6 @@ function Navbar() {
   // Faqat desktop uchun linklar
   const desktopLinks = [
     { name: "Asosiy", path: "/" },
-    { name: "Blog", path: "/" },
-    { name: "Sayohatlar", path: "/travels" },
     { name: "Biz Haqimizda", path: "/about" },
     { name: "Aloqa", path: "/contact" },
   ];
@@ -61,14 +59,14 @@ function Navbar() {
                   className={`relative group cursor-pointer transition-all duration-300 
                   ${
                     activeLink === menu.name
-                      ? "text-green-500 font-semibold"
-                      : "hover:text-green-500"
+                      ? "text-[#365a84] font-semibold"
+                      : ""
                   } 
                   ${scrolled ? "text-black" : "text-white"}`}
                   onClick={() => handleLinkClick(menu.name)}
                 >
                   <Link to={menu.path}>{menu.name}</Link>
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#365a84] transition-all duration-300 group-hover:w-full"></span>
                 </li>
               ))}
             </ul>
@@ -127,8 +125,8 @@ function Navbar() {
                   key={index}
                   className={`mb-4 transition-all duration-300 ${
                     activeLink === menu.name
-                      ? "text-green-500 font-semibold"
-                      : "hover:text-green-500"
+                      ? "text-[#365a84] font-semibold"
+                      : "hover:text-[#365a84]"
                   } cursor-pointer`}
                   onClick={() => handleLinkClick(menu.name)}
                 >

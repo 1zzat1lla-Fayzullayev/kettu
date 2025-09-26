@@ -33,7 +33,7 @@ function ContactPage() {
                 <input
                   type="text"
                   placeholder="Ismingizni kiriting"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#365a84] focus:outline-none"
                 />
               </div>
 
@@ -42,7 +42,7 @@ function ContactPage() {
                 <input
                   type="email"
                   placeholder="Emailingizni kiriting"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#365a84] focus:outline-none"
                 />
               </div>
 
@@ -53,7 +53,7 @@ function ContactPage() {
                 <textarea
                   rows={4}
                   placeholder="Xabaringizni yozing..."
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#365a84] focus:outline-none"
                 ></textarea>
               </div>
 

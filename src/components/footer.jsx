@@ -158,7 +158,7 @@ function Footer() {
                     placeholder="Email manzil"
                     className="flex-1 bg-gray-800 px-4 py-2 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                   />
-                  <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                  <button className="bg-[#365a84] px-4 py-2 rounded-lg transition">
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
