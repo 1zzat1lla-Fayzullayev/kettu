@@ -206,7 +206,7 @@ function Header() {
                             onClick={() => setAdults(Math.max(1, adults - 1))}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-[#365a84] hover:text-green-600"
+                       hover:border-[#365a84]"
                             disabled={adults <= 1}
                           >
                             -
@@ -224,7 +224,7 @@ function Header() {
                             onClick={() => setAdults(adults + 1)}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-[#365a84] hover:text-green-600"
+                       hover:border-[#365a84]"
                           >
                             +
                           </motion.button>
@@ -252,7 +252,7 @@ function Header() {
                             onClick={() => setYouth(Math.max(0, youth - 1))}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-[#365a84] hover:text-green-600"
+                       hover:border-[#365a84]"
                             disabled={youth <= 0}
                           >
                             -
@@ -270,7 +270,7 @@ function Header() {
                             onClick={() => setYouth(youth + 1)}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-[#365a84] hover:text-green-600"
+                       hover:border-[#365a84]"
                           >
                             +
                           </motion.button>
@@ -298,7 +298,7 @@ function Header() {
                             }
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-[#365a84] hover:text-green-600"
+                       hover:border-[#365a84]"
                             disabled={children <= 0}
                           >
                             -
@@ -316,7 +316,7 @@ function Header() {
                             onClick={() => setChildren(children + 1)}
                             className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center 
                        text-gray-600 font-medium text-lg transition-colors duration-200
-                       hover:border-[#365a84] hover:text-green-600"
+                       hover:border-[#365a84]"
                           >
                             +
                           </motion.button>
