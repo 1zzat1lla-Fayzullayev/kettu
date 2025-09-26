@@ -88,7 +88,7 @@ function Navbar() {
 
           {/* Mobile burger menu */}
           <button className="lg:hidden" onClick={toggleMobileMenu}>
-            <div className="flex flex-col bg-green-700 rounded-md w-10 h-10 justify-center items-center p-2">
+            <div className="flex flex-col bg-[#365a84] rounded-md w-10 h-10 justify-center items-center p-2">
               <div className="flex flex-col items-end gap-1">
                 <div className="w-6 h-[2px] bg-white"></div>
                 <div className="w-4 h-[2px] bg-white"></div>
