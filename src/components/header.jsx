@@ -341,7 +341,7 @@ function Header() {
                         whileTap={{ scale: 0.98 }}
                         onClick={handleApplyGuests}
                         className="bg-[#365a84] text-white w-full py-3 rounded-lg font-semibold 
-                   hover:bg-green-600 transition-all duration-200 text-lg"
+                    transition-all duration-200 text-lg"
                       >
                         Tasdiqlash
                       </motion.button>
@@ -364,7 +364,7 @@ function Header() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#365a84] text-white w-full h-[60px] rounded-md font-semibold hover:bg-green-600 transition"
+                className="bg-[#365a84] text-white w-full h-[60px] rounded-md font-semibold  transition"
               >
                 Qidirish
               </motion.button>

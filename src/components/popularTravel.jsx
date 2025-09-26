@@ -294,7 +294,7 @@ function PopularTravel() {
               boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
             }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#365a84] text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors"
+            className="bg-[#365a84] text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
           >
             Barcha yo'nalishlarni ko'rish
           </motion.button>
