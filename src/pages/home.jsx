@@ -4,7 +4,7 @@ import InfoCard from "../components/infoCard";
 import PopularTravel from "../components/popularTravel";
 import StylingPlaces from "../components/stylingPlaces";
 import OurTraveler from "../components/ourTraveler";
-import { Contact } from "lucide-react";
+import Contact from "../components/contact";
 
 function Home() {
   return (
