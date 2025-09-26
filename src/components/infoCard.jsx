@@ -91,10 +91,7 @@ function InfoCard() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2937] mb-4">
             Nima uchun Transport Mix?
           </h2>
-          <p className="text-lg text-[#6b7280] max-w-2xl mx-auto">
-            Bizning platformamiz sayohatingizni oddiy va qulay qilish uchun
-            yaratilgan
-          </p>
+          
         </motion.div>
 
         <Swiper
