@@ -133,7 +133,7 @@ const TravelCard = ({
                 alt="Location"
                 loading="lazy"
               />
-              <span className="text-gray-600 text-[14px] md:text-[16px]">
+              <span className="text-gray-600 text-[14px] md:text-[15px]">
                 {location}
               </span>
             </motion.div>
@@ -282,7 +282,6 @@ function PopularTravel() {
           ))}
         </motion.div>
 
-        {/* View All Button */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
