@@ -78,7 +78,7 @@ function Login() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80')",
+            "url('/login.avif')",
         }}
       />
 
