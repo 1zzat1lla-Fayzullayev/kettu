@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import ContactPage from "./pages/contactPage";
 import Travels from "./pages/travels";
+import Login from "./pages/login";
 
 const Header = lazy(() => import("./components/header"));
 const InfoCard = lazy(() => import("./components/infoCard"));
@@ -34,6 +35,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/travels" element={<Travels />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
         </BrowserRouter>

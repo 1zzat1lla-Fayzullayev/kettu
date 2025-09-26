@@ -35,6 +35,7 @@ function Navbar() {
     { name: "Sayohatlar", path: "/travels" },
     { name: "Biz Haqimizda", path: "/about" },
     { name: "Aloqa", path: "/contact" },
+    { name: "Tizimga kirish uchun", path: "/login" },
   ];
 
   return (
@@ -112,16 +113,18 @@ function Navbar() {
             </ul>
           </div>
 
-          <div className="hidden lg:flex items-center gap-2 cursor-pointer">
-            <img src="/user-profile.svg" className="w-6" alt="User" />
-            <p
-              className={`text-md font-medium ${
-                scrolled ? "text-black" : "text-white"
-              }`}
-            >
-              Tizimga kirish
-            </p>
-          </div>
+          <Link to={"/login"}>
+            <div className="hidden lg:flex items-center gap-2 cursor-pointer">
+              <img src="/user-profile.svg" className="w-6" alt="User" />
+              <p
+                className={`text-md font-medium ${
+                  scrolled ? "text-black" : "text-white"
+                }`}
+              >
+                Tizimga kirish
+              </p>
+            </div>
+          </Link>
 
           <button className="lg:hidden" onClick={toggleMobileMenu}>
             <div className="flex flex-col bg-green-700 rounded-md w-10 h-10 justify-center items-center p-2">
