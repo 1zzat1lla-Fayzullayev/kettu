@@ -15,7 +15,7 @@ function Footer() {
       {/* FOOTER */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="grid lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-start flex-col space-x-2 mb-4">
